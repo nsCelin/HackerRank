@@ -54,3 +54,4 @@ WHERE ROWNUM = 1;
                                City like '%o' OR
                                City like '%u' ;
 
+13. 
