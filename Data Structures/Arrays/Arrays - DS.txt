@@ -1,0 +1,50 @@
+Q : An array is a type of data structure that stores elements of the same type in a contiguous block of memory. In an array, A, of size N, each memory location has some unique index,i (where 0<= i <= N), that can be referenced as A[i] (you may also see it written as Ai).
+
+Given an array,A, of N integers, print each element in reverse order as a single line of space-separated integers.
+
+Note: If you've already solved our C++ domain's Arrays Introduction challenge, you may want to skip this.
+
+A :
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt(); //count of numbers
+        
+        List<Integer> input = new ArrayList<Integer>();
+        
+        for(int i= 0; i< number; i++)
+        {
+        	input.add(scan.nextInt());
+        }
+        
+        /*https://stackoverflow.com/questions/26446147/accepting-multiple-integers-on-a-single-line-using-scanner*/
+        /*while(scan.hasNextInt())
+            input.add(scan.nextInt()); */
+        
+        scan.close();
+        
+        Integer[] numbers = input.toArray(new Integer[0]);
+        
+        int[] result = new int[numbers.length];
+
+        for(int i=0; i<numbers.length; i++)
+        {
+        	int temp = numbers[i];
+        	result[numbers.length-i-1] = temp;
+            //System.out.println(temp);
+        }
+        
+        for(int i : result)
+        {
+            System.out.print(i + " ");
+        }
+       // System.out.println(Arrays.toString(result));
+      
+    }
+}
+
